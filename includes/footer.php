@@ -1,9 +1,6 @@
 <?php
 $date = date('Y');
 ?>
-
-
-
 <footer>
-    <p>&copy; <?=$date?> - NFactory Corp</p>
+    <p>&copy; <?=$date?> - NFactory Corp.</p>
 </footer>

@@ -1,6 +1,8 @@
 <?php
 date_default_timezone_set('Europe/Paris');
-include "./includes/header.php";
+include_once "./functions/displayTitle.php";
+include_once "./includes/html.php";
+include_once "./includes/header.php";
 
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
@@ -10,7 +12,16 @@ else {
     $page = "accueil";
 }
 
-$page = "./includes/" . $page . ".php";
-include $page;
+$path = "./includes/";
+$contenu = glob($path . "*.inc.php");
+$page = $path . $page . ".inc.php";
 
-include "./includes/footer.php";
+if (in_array($page, $contenu)) {
+    include_once $page;
+}
+
+else {
+    include_once "./includes/accueil.inc.php";
+}
+
+include_once "./includes/footer.php";

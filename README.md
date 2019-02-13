@@ -1,2 +1,2 @@
 # RFD-PHP
-Enfin du vrai code.
+Enfin, du vrai code.
